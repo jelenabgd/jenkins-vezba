@@ -9,9 +9,10 @@ pipeline {
               }
             }
             steps {
-                sh 'echo "currentBuild.number"'
-                sh '''IME_GRANE=${env.BRANCH_NAME}
-                    echo IME_GRANE'''
+                // sh 'echo "currentBuild.number"'
+                // sh '''IME_GRANE=${env.BRANCH_NAME}
+                //     echo IME_GRANE'''
+                sh 'echo "currentBuild.result1: '${currentBuild.result}'" '   
             }
         }
     }
