@@ -1,17 +1,9 @@
 pipeline {
     agent any
-
     stages {
-        stage('Deploy') {
-            when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-              }
-            }
+        stage('Example') {
             steps {
-                echo "currentBuild.number"
-                echo "IME_GRANE: ${env.BRANCH_NAME}"
-                // echo "currentBuild.result1: '${currentBuild.result}'" 
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
     }
